@@ -269,7 +269,7 @@ class AMRA_Star:
         plt.figure()
         plt.imshow(plot_map)
         plt.show()
-        output_pics = f'Sunderbans_output_w={self.w1}.png'
+        output_pics = f'Sunderbans_output_extended_w={self.w1}.png'
         cv2.imwrite(output_pics, plot_map)
 
     def get_paths(self):
@@ -362,7 +362,7 @@ class AMRA_Star:
         self.current_queue_index = 1
 
         try:
-            while self.w1 > 2 and self.w2 > 2:
+            while self.w1 > 1 and self.w2 > 1:
                 self.video_map = np.copy(self.color_map)
                 # Annotate(self.video_map, self.start, self.goal, (2*self.buffer[0]+1, 2*self.buffer[0]+1), self.w1, self.w2)
                 # self.num_expansions = 0
@@ -461,7 +461,7 @@ heuristics = [euclidean, euclidean_2, manhattan, manhattan]
 heuristic_to_res = {0: 0, 1: 1, 2: 1, 3: 1}
 start = [1000, 1000]
 goal = [20, 630]
-size_of_UAV = (1, 1)
+size_of_UAV = (3, 3)
 amra_star_solver = AMRA_Star(map, image, resolutions, heuristics, heuristic_to_res, start, goal, size_of_UAV, w1=501, w2=501)
 # Cost_map = amra_star_solver.backward_dijkstra_calculator(goal)
 amra_star_solver.Main()
