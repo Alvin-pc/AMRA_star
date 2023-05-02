@@ -8,42 +8,6 @@ import heapq
 # download the image files for mapping problem
 import gdown
 
-
-# url = 'https://drive.google.com/uc?id=1p4nuEn-T1v1ku3TO-Y3yY87Ro8SDWA7t'
-# output = 'Sunderbans_map_1_color.png'
-# gdown.download(url, output, quiet=False)
-#
-# image = cv2.imread('Sunderbans_map_1_color.png')
-
-# # convert the input image to grayscale
-# gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-#
-# # Convert to binary image
-# ret, image_binary = cv2.threshold(gray, 90, 255, cv2.THRESH_BINARY_INV)
-#
-# plt.imshow(image_binary, 'gray', vmin=0, vmax=255)
-# # plt.show()
-# print(image_binary.shape)
-
-# output_binary = r'D:\Motion Planning Code\Sunderbans_map_bw.png'
-# cv2.imwrite(output_binary, image_binary)
-
-# url = 'https://drive.google.com/uc?id=1QptRsoEcFxJgmIXxDIR0YUs-lR7Co1mO'
-# output = 'Sunderbans_map_1_color.png'
-# gdown.download(url, output, quiet=False)
-#
-# image = cv2.imread('Sunderbans_map_1_color.png')
-#
-# # convert the input image to grayscale
-# gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-#
-# # Convert to binary image
-# ret, image_binary = cv2.threshold(gray, 170, 255, cv2.THRESH_BINARY)
-#
-# plt.imshow(image_binary, 'gray', vmin=0, vmax=255)
-# plt.show()
-# print(image_binary.shape)
-
 def Image_to_use(url, is_bw=False):
     output = 'Map.png'
     gdown.download(url, output, quiet=False)
